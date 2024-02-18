@@ -1,0 +1,5 @@
+{
+  "name": "pnpm-action-setup-issue",
+  "version": "1.0.0",
+  "packageManager": "pnpm@8.15.3"
+}
