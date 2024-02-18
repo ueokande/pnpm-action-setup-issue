@@ -18,5 +18,5 @@ jobs:
         run: |
           echo '{ "packageManager": "pnpm@8.15.3" }' >package.json
       - run: id
-      - uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@v3
       - run: id
