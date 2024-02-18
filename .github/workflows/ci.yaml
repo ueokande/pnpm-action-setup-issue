@@ -1,0 +1,19 @@
+name: 'build-test'
+on:
+  push:
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        container:
+          - fedora
+          - debian
+          - opensuse/leap
+    runs-on: ubuntu-latest
+    container: ${{ matrix.container }}
+    steps:
+      - run: id
+      - uses: pnpm/action-setup@v2
+      - run: id
