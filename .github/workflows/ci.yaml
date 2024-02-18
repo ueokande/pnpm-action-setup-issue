@@ -14,6 +14,9 @@ jobs:
     runs-on: ubuntu-latest
     container: ${{ matrix.container }}
     steps:
+      - name: prepare package.json
+        run: |
+          echo '{ "packageManager": "pnpm@8.15.3" }' >package.json
       - run: id
       - uses: pnpm/action-setup@v2
       - run: id
